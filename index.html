@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <a href="user.html">GO to user management</a>
+    <div class="container">
+      <div class="header form-input">
+        Register form
+      </div>
+      <div class="flex form-input">
+        <div class="header-form">ชื่อ</div>
+        <input class="form" name="firstname" type="text" />
+      </div>
+
+      <div class="flex form-input">
+        <div class="header-form">นามสกุล</div>
+        <input class="form" name="lastname" type="text" />
+      </div>
+      
+      <div class="flex form-input">
+        <div class="header-form">อายุ</div>
+        <input class="form" name="age" type="number" min="0" max="100" />
+      </div>
+
+      <div class=" flex gender form-input">
+        <div class="header-form">เพศ</div>
+        <div class="flex">
+            <div>
+              <input type="radio" name="gender" 
+              value="ชาย" />
+              ชาย
+            </div>
+            <div>
+              <input type="radio" name="gender" 
+              value="หญิง"/>
+              หญิง
+            </div>
+            <div>
+              <input type="radio" name="gender" 
+              value="ไม่ระบุ" />
+              ไม่ระบุ
+            </div>
+            
+        </div>
+      </div>
+
+      <div class="form-input">
+        สิ่งที่สนใจ
+        <div><input 
+          type="checkbox" 
+          name="interest" 
+          value="หนังสือ"/>
+          หนังสือ
+        </div>
+
+        <div>
+          <input 
+          type="checkbox" 
+          name="interest" 
+          value="ภาพยนตร์"/>
+          ภาพยนตร์
+        </div>
+        <div>
+          <input 
+          type="checkbox" 
+          name="interest" 
+          value="วีดีโอเกม"/>
+          วีดีโอเกม
+        </div>
+      </div>
+
+      <div class="form-input">
+        คำอธิบายเพิ่มเติม
+        <div>
+          <textarea name="description"></textarea>
+        </div>
+      </div>
+
+      <div class="form-input center">
+        <a href="https://google.com">Google</a>
+      </div>
+
+      <div id="message" class="message"></div>
+      
+      <div class="center">
+        <button onclick="submitData()" class="button">Submit</button>
+      </div>
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
