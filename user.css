@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "kanit";
+    src: url(./Kanit/Kanit-Regular.ttf);
+  }
+
+  body {
+    font-family: kanit;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    block-size: border-box;
+  }
+
+  .header {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+

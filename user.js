@@ -14,12 +14,24 @@ const loadData = async () => {
     const userDOM = document.getElementById('user')
 
     let htmlData = '<div>'
-    for (let i = 0; i < response.data.length; i++) {
+
+    for (let i = response.data.length - 1; i >= 0 ; i--) {
         let user = response.data[i]
-        htmlData += `<div>
-        ${user.id}${user.firstname} ${user.lastname}
-        <a href='index.html?id=${user.id}'><button>Edit</button></a>
-        <button class='delete' data-id='${user.id}'>Delete</button>
+        htmlData += `<div class="card card-body mb-2">
+        ${user.firstname} ${user.lastname} 
+        <a href='index.html?id=${user.id}' class="text-decoration-none">
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-outline-success">
+        Edit
+        </button>
+        </a>
+        
+        <button class="delete btn btn-outline-danger" 
+        data-id='${user.id}'>
+        Delete
+        </button>
+        </div>
         </div>`
     }
 
